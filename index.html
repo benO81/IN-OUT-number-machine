@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>IN / OUT Machine</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="wrap">
+  <h1>IN / OUT Machine</h1>
+  <p class="subtitle">Look at the rule in the machine. Can you work out the outputs?</p>
+
+  <div class="machine-outer">
+    <!-- Column labels -->
+    <div class="col-labels">
+      <span class="col-label">IN</span>
+      <span class="col-label">OUT</span>
+    </div>
+
+    <!-- Main machine layout: in-stack | left-connectors | body | right-connectors | out-stack -->
+    <div class="machine-layout">
+      <div class="io-stack" id="in-boxes"></div>
+      <div class="connector-col" id="left-connectors"></div>
+      <div class="machine-body">
+        <div class="machine-rule" id="machine-rule"></div>
+      </div>
+      <div class="connector-col" id="right-connectors"></div>
+      <div class="io-stack" id="out-boxes"></div>
+      <div class="feedback-col" id="feedback-list"></div>
+    </div>
+  </div>
+
+  <!-- Overall status -->
+  <div class="overall-status" id="overall-status"></div>
+
+  <!-- Pattern description -->
+  <div class="pattern-section" id="pattern-section" hidden>
+    <h2>Pattern</h2>
+    <p id="pattern-text"></p>
+  </div>
+
+  <!-- Buttons -->
+  <div class="btn-row">
+    <button class="btn-hint" id="hint-btn">Show Pattern</button>
+    <button class="btn-reset" id="reset-btn">Reset</button>
+    <button class="btn-randomize" id="randomize-btn">New Rule</button>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
